@@ -18,3 +18,13 @@ server.listen(PORT, ()=> console.log('server running'))
 
 
 
+
+
+const sightings= awaitgetData()
+sightings.push(newSighting)
+path.join('data', 'data.json')
+
+await fs.writeFile(
+pathJSON, JSON.stringify(sightings, null, 2), 'utf8'
+
+)
