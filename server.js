@@ -17,9 +17,6 @@ server.listen(PORT, ()=> console.log('server running'))
 
 
 
-
-
-
 const sightings= awaitgetData()
 sightings.push(newSighting)
 path.join('data', 'data.json')
