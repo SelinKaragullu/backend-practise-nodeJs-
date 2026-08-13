@@ -32,7 +32,9 @@ if(req.url=='/app' )
    {if(req.method=='GET')handlePost(res)}
 
 
-   handleGet () {
+   async function handleGet (res) {
 
-      const data = await getDefaultAutoSelectFamily()
+      const data = await getData()
+      const content = JSON.stringify(data)
+      sendResponse(res,200,'application/json',content)
    }
