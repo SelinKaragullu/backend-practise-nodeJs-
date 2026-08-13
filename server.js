@@ -30,3 +30,9 @@ if(method=='GET'){handleGet()}
 if(req.url=='/app' )
    
    {if(req.method=='GET')handlePost(res)}
+
+
+   handleGet () {
+
+      const data = await getDefaultAutoSelectFamily()
+   }
