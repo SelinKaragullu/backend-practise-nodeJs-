@@ -24,17 +24,14 @@ pathJSON, JSON.stringify(sightings, null, 2), 'utf8'
 
 )
 
-
-if(method=='GET'){handleGet()}
-
-if(req.url=='/app' )
-   
-   {if(req.method=='GET')handlePost(res)}
-
-
    async function handleGet (res) {
 
       const data = await getData()
       const content = JSON.stringify(data)
       sendResponse(res,200,'application/json',content)
    }
+
+
+
+
+   
