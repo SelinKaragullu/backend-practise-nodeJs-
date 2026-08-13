@@ -15,8 +15,6 @@ const server = http.createServer(async (req,res)=> {
 
 server.listen(PORT, ()=> console.log('server running'))
 
-
-
 const sightings= awaitgetData()
 sightings.push(newSighting)
 path.join('data', 'data.json')
@@ -25,3 +23,10 @@ await fs.writeFile(
 pathJSON, JSON.stringify(sightings, null, 2), 'utf8'
 
 )
+
+
+if(method=='GET'){handleGet()}
+
+if(req.url=='/app' )
+   
+   {if(req.method=='GET')handlePost(res)}
