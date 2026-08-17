@@ -34,4 +34,10 @@ pathJSON, JSON.stringify(sightings, null, 2), 'utf8'
 
 
 
-   
+   const server = http.createServer(async (req, res) => {
+
+if(req.url===__dirname) {if(req.method==='GET') {handleGet(res)}}
+
+if(req.url===__dirname) {if(req.method==='POST') {handlePost(req,res)}}
+serveStatic(req, res, )
+})
