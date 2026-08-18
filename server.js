@@ -40,3 +40,10 @@ if(req.url==='/api') {if(req.method==='GET') {handleGet(res)}}
 else if(req.url==='/api') {if(req.method==='POST') {handlePost(req,res)}}
 else if(!req.url.startsWith('/api')){serveStatic(req, res, __dirname)}
 })
+
+handleGet
+handlePost
+serveStatic
+serveStatic
+serveStatic
+serveStatic
