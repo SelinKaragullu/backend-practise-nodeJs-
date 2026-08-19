@@ -41,11 +41,19 @@ else if(req.url==='/api') {if(req.method==='POST') {handlePost(req,res)}}
 else if(!req.url.startsWith('/api')){serveStatic(req, res, __dirname)}
 })
 
-handleGet
-handlePost
-serveStatic
-serveStatic
-serveStatic
-serveStatic
 
 
+import http from 'node:http'
+
+const PORT = 8000
+
+const __dirname = import.meta.dirname
+
+const server = http.createServer(async (req, res) => {
+
+handleGet()
+})
+
+server.listen(PORT, () => {
+    console.log(`Connected on port: ${PORT}`)
+})
