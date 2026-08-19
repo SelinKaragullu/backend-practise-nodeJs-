@@ -51,7 +51,13 @@ const __dirname = import.meta.dirname
 
 const server = http.createServer(async (req, res) => {
 
-handleGet()
+if(req.url==='/api') {
+
+   if(req.method==='POST') {handlePost(req,res)}
+   else if(req.method==='GET') {handleGet(res)}
+}
+
+else if(!req.url.startsWith('/api')) {serveStatic(req, res, __dirname)}
 })
 
 server.listen(PORT, () => {
