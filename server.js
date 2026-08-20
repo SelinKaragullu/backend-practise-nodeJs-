@@ -67,5 +67,12 @@ server.listen(PORT, () => {
 
 export async function handlePost(req, res) {
 
+newSigthing = parseJSONBody(req)
 
+const content = getData()
+fs.writeFile
+content.push(newSighting)
+sendResponse(201,,application/json,content)
 }
+
+mantık aslında şöyle: geleni parse et,  getir geleni existing dataya pushla browsera kaydedildi diye response gönder
