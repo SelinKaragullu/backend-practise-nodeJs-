@@ -63,3 +63,9 @@ else if(!req.url.startsWith('/api')) {serveStatic(req, res, __dirname)}
 server.listen(PORT, () => {
     console.log(`Connected on port: ${PORT}`)
 })
+
+
+export async function handlePost(req, res) {
+
+
+}
