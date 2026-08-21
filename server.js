@@ -76,4 +76,3 @@ const content = JSON.stringify(parsedBody)
 sendResponse(res,201,'application/json',content)
 }
 
-mantık aslında şöyle: geleni parse et,  getir geleni existing dataya pushla browsera kaydedildi diye response gönder
